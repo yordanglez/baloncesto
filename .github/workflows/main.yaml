@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: descargar repostorio
-      uses: actions/checkout@v
+      uses: actions/checkout@v3
     - name: pruebas-unitarias
       run: mvn test
     - name: compilar la aplicación sin repetir pruebas
