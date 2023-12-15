@@ -15,7 +15,7 @@ public class PruebasPhantomjsIT
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setJavascriptEnabled(true);
         caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,"/usr/bin/phantomjs");
-        caps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, newString[] {"--web-security=no", "--ignore-ssl-errors=yes"});
+        caps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, new String[] {"--web-security=no", "--ignore-ssl-errors=yes"});
         driver = new PhantomJSDriver(caps);
         driver.navigate().to("http://localhost:8085/Baloncesto/");
         assertEquals("Votacion mejor jugador liga ACB", driver.getTitle(),"El titulo no es correcto");
